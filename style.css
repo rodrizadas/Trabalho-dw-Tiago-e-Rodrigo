@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------ */
+/*           CONTAINER            */
+/* ------------------------------ */
+
+.container {
+    width: 650px;
+    padding: 35px 40px;
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13);
+    z-index: 10;
+    position: relative;
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.container h1 {
+    text-align: center;
+    color: #2e3f72;
+    margin-bottom: 18px;
+    font-size: 28px;
+}
+
+/* ------------------------------ */
+/*   BOTÃO DE CADASTRAR NOVA      */
+/* ------------------------------ */
+
+.btn-add {
+    display: inline-block;
+    margin: 10px 0 25px 0;
+    padding: 10px 18px;
+
+    background: #4d7bff;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    border-radius: 22px;
+    transition: 0.2s ease;
+}
+
+.btn-add:hover {
+    background: #3a63d6;
+    transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/*           LISTA TAREFAS        */
+/* ------------------------------ */
+
+#lista-tarefas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cada item da lista (quando o JS gerar) */
+.tarefa {
+    background: rgba(180, 210, 255, 0.35);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarefa:hover {
+    background: rgba(170, 200, 255, 0.5);
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* Botões de ação */
+.btn-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar,
+.btn-remover {
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.btn-editar {
+    background: #4d7bff;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #3a63d6;
+}
+
+.btn-remover {
+    background: #ff6464;
+    color: white;
+}
+
+.btn-remover:hover {
+    background: #d44d4d;
+}
+
+/* ------------------------------ */
+/*           ONDA FUNDO           */
+/* ------------------------------ */
+
+.wave {
+    position: absolute;
+    bottom: -140px;
+    left: -180px;
+    width: 160%;
+    height: 440px;
+
+    background: #b3c9ff;
+    border-radius: 50% 50% 0 0;
+
+    transform: rotate(-8deg);
+    transform-origin: left bottom;
+
+    z-index: 1;
+    filter: blur(2px);
+}
+
+/* ------------------------------ */
+/*      SCROLL BONITO NA DIV      */
+/* ------------------------------ */
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #4d7bff;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}

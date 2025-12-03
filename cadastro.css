@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ------------------------------ */
+/*   CONTAINER TRANSLÚCIDO FORM   */
+/* ------------------------------ */
+
+.form-container {
+    width: 520px;
+    padding: 35px 40px;
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13);
+    z-index: 10;
+    position: relative;
+}
+
+/* ------------------------------ */
+/*             HEADER             */
+/* ------------------------------ */
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #2e3f72;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #4d7bff;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ------------------------------ */
+/*          CAMPOS FORM           */
+/* ------------------------------ */
+
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #2e3f72;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    padding: 14px;
+    font-size: 14px;
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(180, 210, 255, 0.40);
+    backdrop-filter: blur(4px);
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    background: rgba(160, 190, 255, 0.55);
+    transform: scale(1.01);
+}
+
+/* Placeholder estilizado */
+.campo input::placeholder {
+    color: #6b7ca5;
+}
+
+/* ------------------------------ */
+/*            BOTÃO               */
+/* ------------------------------ */
+
+#btnSalvar {
+    width: 180px;
+    padding: 13px;
+    margin: 10px auto 0 auto;
+    display: block;
+
+    background: #4d7bff;
+    border: none;
+    border-radius: 25px;
+
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#btnSalvar:hover {
+    background: #3a63d6;
+    transform: scale(1.05);
+}
+
